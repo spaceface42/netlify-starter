@@ -1,7 +1,7 @@
 # netlify.toml
 
 [build]
-  publish = "/"        # Where your index.html lives
+  publish = "/"        # Where your index.html or contact.html lives
   command = ""         # No build command needed for pure HTML
 
 # Optional redirects
@@ -9,6 +9,11 @@
   from = "/old-page.html"
   to = "/index.html"
   status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
 
 # Optional headers
 [[headers]]
