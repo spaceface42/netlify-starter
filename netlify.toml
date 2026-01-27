@@ -1,0 +1,18 @@
+# netlify.toml
+
+[build]
+  publish = "/"        # Where your index.html lives
+  command = ""         # No build command needed for pure HTML
+
+# Optional redirects
+[[redirects]]
+  from = "/old-page.html"
+  to = "/index.html"
+  status = 301
+
+# Optional headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
